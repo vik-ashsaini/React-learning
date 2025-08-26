@@ -9,12 +9,22 @@
     <div id="root">
         <!-- <h1>Hello from html</h1> -->
     </div>
-    <script>
+    <!-- <script>
         const msg = document.createElement('h1');
         msg.innerHTML = 'Hello From Javascript';
 
         const root = document.getElementById('root');
         root.appendChild(msg);
+    </script> -->
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const msg = React.createElement('h1',{},'Hello From React');
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(msg);
     </script>
 </body>
 </html>
