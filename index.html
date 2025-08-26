@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="root">
-        <!-- <h1>Hello from html</h1> -->
+      <!-- <h1>Hello from html</h1> -->
     </div>
     <!-- <script>
         const msg = document.createElement('h1');
@@ -17,14 +17,47 @@
         root.appendChild(msg);
     </script> -->
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- <div id="parent">
+        <div id="child">
+            <h1 id="greeting">Hello Form React</h1>
+            <h2 id="greeting2">Hello Form React Heading 2</h2>
+        </div>
+    </div> -->
 
-    <script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- <script>
         const msg = React.createElement('h1',{},'Hello From React');
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(msg);
+    </script>  -->
+
+    <script>
+      const msg = React.createElement(
+        "div",
+        { id: "parent" },
+        React.createElement("div", { id: "child" }, [
+          React.createElement("h1", { id: "greeting" }, "Hello Form React"),
+          React.createElement(
+            "h2",
+            { id: "greeting2" },
+            "Hello Form React Heading 2"
+          ),
+        ])
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(msg);
     </script>
-</body>
+<!-- working with multiple Html component is complex in react cdn -->
+
+  </body>
 </html>
