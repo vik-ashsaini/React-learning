@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
-      <Hello />
-      <Bye />
+      <Hello name="Vikash" />
+      <Hello name="Saini" />
+      <Bye name="vikash" phoneNumber="8251228" />
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
